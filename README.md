@@ -5,6 +5,8 @@ this kind of menu here: https://www.webfx.com/blog/web-design/off-canvas-menu. T
 environment in which the menu is to be built. The project includes some source files from the live LEARN website that
 are used to support the mock development environment.
 
+![](demo.gif)
+
 ## Requirements for this menu:
 
 ### Size and position
@@ -149,7 +151,7 @@ total point value will be multiplied by the multiplier to determine a score, and
         - (3 pts) Usage of modern techniques
         - (3 pts) No pollution of the global namespace
     - General (20 points total)
-        - (10 pts) Appropriate code organization-
+        - (10 pts) Appropriate code organization
         - (6 pts) Consistent code style
         - (4 pts) Documentation of interesting or notable decisions
 
