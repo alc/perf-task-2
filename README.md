@@ -7,6 +7,14 @@ are used to support the mock development environment.
 
 ![](demo.gif)
 
+## Table of contents
+
+---
+
+## About LEARN
+
+---
+
 ## Requirements for this menu:
 
 ### Size and position
