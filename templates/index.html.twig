@@ -1,0 +1,26 @@
+{% from 'macros.twig' import icon %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description"
+          content="Authentic lessons, instructional strategies, and engaging activities for 21st Century Learning">
+    <title>K20 Center LEARN</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="icon" href="/img/favicon.png">
+</head>
+<body>
+{% include 'header.html.twig' %}
+<div class="container">
+    <div class="panel-right">
+        <h2 class="title">{{ icon('my-learn') }}My LEARN</h2>
+        {% include 'my-learn.html.twig' %}
+        <h3 class="title">Available Twig variables</h3>
+        <p style="margin-bottom: 1rem">E.g. <code>{{ '{{' }} app.user.firstName }}</code> prints <code>{{ app.user.firstName }}</code></p>
+        <pre>{{ dump(_context) }}</pre>
+    </div>
+</div>
+<script src="js/index.js"></script>
+</body>
+</html>

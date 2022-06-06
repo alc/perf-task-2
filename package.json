@@ -1,0 +1,38 @@
+{
+  "name": "perf-task-2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rimraf public/*",
+    "copy": "copyfiles -u 1 assets/img/*.* public",
+    "sass": "sass assets/scss:public/css --watch",
+    "rollup": "rollup assets/js/index.js --config rollup.config.js --watch",
+    "prestart": "npm run clean",
+    "start": "concurrently -r \"npm:copy\" \"npm:sass\" \"npm:rollup\" \"node server.js\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alc/perf-task-2.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alc/perf-task-2/issues"
+  },
+  "homepage": "https://github.com/alc/perf-task-2#readme",
+  "dependencies": {
+    "express": "^4.18.1",
+    "twing": "^5.1.1"
+  },
+  "devDependencies": {
+    "@rollup/plugin-node-resolve": "^13.3.0",
+    "concurrently": "^7.2.1",
+    "copyfiles": "^2.4.1",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.75.5",
+    "sass": "^1.52.2",
+    "tailwindcss": "^3.0.24"
+  }
+}

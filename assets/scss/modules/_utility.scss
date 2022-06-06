@@ -1,0 +1,490 @@
+@import '../modules/colors';
+@mixin text-link {
+  a {
+    text-decoration: none;
+    &:link {
+      border-bottom: 0.125em solid $yellow-100;
+      text-decoration-color: $yellow-100;
+      text-decoration-thickness: 0.125em;
+      text-underline-offset: 1.5px;
+    }
+    &:visited {
+      border-bottom: 0.125em solid $yellow-100;
+      text-decoration-color: $yellow-100;
+      text-decoration-thickness: 0.125em;
+      text-underline-offset: 1.5px;
+    }
+    &:hover {
+      color: $yellow-100;
+      cursor: pointer;
+    }
+  }
+}
+
+@mixin shadow-lg {
+  box-shadow: 0px 3px 20px 0px rgba(0, 0, 0, 0.05);
+  -webkit-box-shadow: 0px 3px 20px 0px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: 0px 3px 20px 0px rgba(0, 0, 0, 0.05);
+  -ms-box-shadow: 0px 3px 20px 0px rgba(0, 0, 0, 0.05);
+  -o-box-shadow: 0px 3px 20px 0px rgba(0, 0, 0, 0.05);
+}
+
+@mixin tables {
+  table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0rem 1.5rem;
+
+    td {
+      padding: 0.5rem;
+      background-color: $white-100;
+
+      .mbr-name {
+        font-weight: bold;
+      }
+
+      .mbr-email {
+        color: $black-50;
+      }
+    }
+    @include svgs(20px, auto);
+  }
+}
+
+@mixin svgs($width, $margin) {
+  svg {
+    width: $width;
+    margin: 0px $margin;
+
+    path {
+      stroke: $black-100;
+      stroke-width: 2px;
+      fill: none;
+    }
+    &:hover path {
+      stroke: $yellow-100;
+    }
+  }
+}
+
+@mixin module-body($bg-color, $bd-color) {
+  background-color: $bg-color;
+  //border: solid 1px $bd-color;
+  width: 100%;
+  padding: 1.25rem 0rem;
+}
+
+/*** break down modeles-shared**/
+@mixin module-group($bg-color, $bd-color) {
+  .module-title {
+    font-weight: lighter;
+    text-transform: uppercase;
+    border-bottom: solid 1px $gray-2;
+    padding-bottom: 0.875rem;
+    margin-bottom: 2rem;
+  }
+  .module-body {
+    background-color: $bg-color;
+    border: solid 1px $bd-color;
+    width: 100%;
+    padding: 1.25rem;
+  }
+}
+
+%modules-shared {
+  @include module-group($gray-1, $gray-2);
+
+  input[type='checkbox'] {
+    border: solid 1px $black-100;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    -o-appearance: none;
+    width: 10px;
+    height: 10px;
+  }
+
+  input[type='text'] {
+    border: solid 0.5px $black-100;
+  }
+
+  //file button
+  input[type='file'] {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0.7;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+  }
+  input[type='file'],
+  label {
+    display: inline-block;
+    cursor: pointer;
+  }
+
+  .checkbox label::before {
+    content: '';
+    display: inline-block;
+    height: 16px;
+    width: 16px;
+    border: 1px solid;
+  }
+  .icon {
+    @include svgs(25px, auto);
+    padding: 5px 10px;
+    margin-left: 2rem;
+
+    a {
+      display: flex;
+
+      &:hover {
+        color: $yellow-100;
+      }
+    }
+    .icon-text {
+      padding: 0px 3px;
+      text-transform: capitalize;
+    }
+  }
+}
+
+%form-shared {
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    align-items: stretch;
+
+    .form-item {
+      text-align: left;
+      flex: 1 1 0;
+      margin-bottom: 3rem;
+      display: flex;
+      flex-direction: column;
+
+      img {
+        margin: 1rem auto;
+      }
+
+      label {
+        display: block;
+        text-align: left;
+        font-weight: bold;
+      }
+      .btn {
+        display: inline;
+        font-weight: lighter;
+        text-align: center;
+      }
+      button {
+        margin: 0 auto;
+      }
+      input[type='text'] {
+        display: block;
+        text-align: left;
+        width: 100%;
+      }
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    .form-group {
+      flex-direction: row;
+    }
+
+    .form-item {
+      text-align: left;
+      padding: 3.5rem;
+      align-items: center;
+    }
+  }
+}
+
+@mixin round-img {
+  img {
+    @include rounded-full;
+    border: solid 2px $gray-2;
+    width: 80px !important;
+    height: auto;
+  }
+}
+
+@mixin img {
+  img {
+    width: 80px;
+    height: auto;
+  }
+}
+
+@mixin pop-up {
+  font-weight: normal;
+  position: absolute;
+  top: 18px;
+  left: 0px;
+  background-color: $white-100;
+  border-radius: 5px;
+  border: 1px $gray-2 solid;
+  padding: 0.5rem 1rem;
+  display: none;
+  z-index: 9999;
+  border: 1px solid $black-25;
+}
+
+/** list **/
+
+%shared-list {
+  padding: 1rem 2rem;
+}
+@mixin unordered-list {
+  list-style: disc;
+  @extend %shared-list;
+}
+@mixin ordered-list {
+  list-style: decimal;
+  @extend %shared-list;
+}
+
+@mixin transform-style($value) {
+  -webkit-transform-style: $value;
+  -moz-transform-style: $value;
+  -ms-transform-style: $value;
+  -o-transform-style: $value;
+  transform-style: $value;
+}
+
+@mixin backface-visibility($value) {
+  -webkit-backface-visibility: $value;
+  -moz-backface-visibility: $value;
+  -ms-backface-visibility: $value;
+  -o-backface-visibility: $value;
+  backface-visibility: $value;
+}
+
+@mixin transform($value) {
+  -webkit-transform: $value;
+  -moz-transform: $value;
+  -ms-transform: $value;
+  -o-transform: $value;
+  transform: $value;
+}
+@mixin transform-origin($val) {
+  -webkit-transform-origin: $val;
+  -moz-transform-origin: $val;
+  -ms-transform-origin: $val;
+  transform-origin: $val;
+}
+
+@mixin transform-style($val) {
+  -webkit-transform-style: $val;
+  -moz-transform-style: $val;
+  -ms-transform-style: $val;
+  transform-style: $val;
+}
+
+@mixin transition($property, $duration, $function, $delay) {
+  -webkit-transition: $property $duration $function $delay;
+  -moz-transition: $property $duration $function $delay;
+  -o-transition: $property $duration $function $delay;
+  transition: $property $duration $function $delay;
+}
+
+@mixin border-radius($radius) {
+  border-radius: $radius;
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+}
+
+@mixin border-radii($topleft, $topright, $bottomright, $bottomleft) {
+  border-top-left-radius: $topleft;
+  border-top-right-radius: $topright;
+  border-bottom-right-radius: $bottomright;
+  border-bottom-left-radius: $bottomleft;
+  -webkit-border-top-left-radius: $topleft;
+  -webkit-border-top-right-radius: $topright;
+  -webkit-border-bottom-right-radius: $bottomright;
+  -webkit-border-bottom-left-radius: $bottomleft;
+  -moz-border-radius-topleft: $topleft;
+  -moz-border-radius-topright: $topright;
+  -moz-border-radius-bottomright: $bottomright;
+  -moz-border-radius-bottomleft: $bottomleft;
+}
+
+@mixin flexbox {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@mixin inline-flex {
+  display: -webkit-inline-box;
+  display: -moz-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+@mixin flex-direction($value: row) {
+  @if $value == row-reverse {
+    -webkit-box-direction: reverse;
+    -webkit-box-orient: horizontal;
+    -moz-box-direction: reverse;
+    -moz-box-orient: horizontal;
+  } @else if $value == column {
+    -webkit-box-direction: normal;
+    -webkit-box-orient: vertical;
+    -moz-box-direction: normal;
+    -moz-box-orient: vertical;
+  } @else if $value == column-reverse {
+    -webkit-box-direction: reverse;
+    -webkit-box-orient: vertical;
+    -moz-box-direction: reverse;
+    -moz-box-orient: vertical;
+  } @else {
+    -webkit-box-direction: normal;
+    -webkit-box-orient: horizontal;
+    -moz-box-direction: normal;
+    -moz-box-orient: horizontal;
+  }
+  -webkit-flex-direction: $value;
+  -ms-flex-direction: $value;
+  flex-direction: $value;
+}
+@mixin justify-content($value: flex-start) {
+  @if $value == flex-start {
+    -webkit-box-pack: start;
+    -moz-box-pack: start;
+    -ms-flex-pack: start;
+  } @else if $value == flex-end {
+    -webkit-box-pack: end;
+    -moz-box-pack: end;
+    -ms-flex-pack: end;
+  } @else if $value == space-between {
+    -webkit-box-pack: justify;
+    -moz-box-pack: justify;
+    -ms-flex-pack: justify;
+  } @else if $value == space-around {
+    -ms-flex-pack: distribute;
+  } @else {
+    -webkit-box-pack: $value;
+    -moz-box-pack: $value;
+    -ms-flex-pack: $value;
+  }
+  -webkit-justify-content: $value;
+  justify-content: $value;
+}
+@mixin align-items($value: stretch) {
+  @if $value == flex-start {
+    -webkit-box-align: start;
+    -moz-box-align: start;
+    -ms-flex-align: start;
+  } @else if $value == flex-end {
+    -webkit-box-align: end;
+    -moz-box-align: end;
+    -ms-flex-align: end;
+  } @else {
+    -webkit-box-align: $value;
+    -moz-box-align: $value;
+    -ms-flex-align: $value;
+  }
+  -webkit-align-items: $value;
+  align-items: $value;
+}
+
+@mixin align-self($value: auto) {
+  -webkit-align-self: $value;
+  @if $value == flex-start {
+    -ms-flex-item-align: start;
+  } @else if $value == flex-end {
+    -ms-flex-item-align: end;
+  } @else {
+    -ms-flex-item-align: $value;
+  }
+  align-self: $value;
+}
+
+@mixin align-content($value: stretch) {
+  -webkit-align-content: $value;
+  @if $value == flex-start {
+    -ms-flex-line-pack: start;
+  } @else if $value == flex-end {
+    -ms-flex-line-pack: end;
+  } @else {
+    -ms-flex-line-pack: $value;
+  }
+  align-content: $value;
+}
+
+@mixin placeholder {
+  &::-webkit-input-placeholder {
+    @content;
+  }
+  &:-moz-placeholder {
+    @content;
+  }
+  &::-moz-placeholder {
+    @content;
+  }
+  &:-ms-input-placeholder {
+    @content;
+  }
+}
+
+@mixin backdrop-filter($filter-type, $value) {
+  -webkit-backdrop-filter: $filter-type + unquote('(#{$value})');
+  -moz-backdrop-filter: $filter-type + unquote('(#{$value})');
+  -ms-backdrop-filter: $filter-type + unquote('(#{$value})');
+  -o-backdrop-filter: $filter-type + unquote('(#{$value})');
+  backdrop-filter: $filter-type + unquote('(#{$value})');
+}
+//delete mixins bellow
+@mixin flex($justify, $direction, $width) {
+  display: flex;
+  justify-content: $justify;
+  align-items: center;
+  flex-direction: $direction;
+  width: $width;
+}
+@mixin title($size, $hight) {
+  font-weight: bold;
+  font-size: $size;
+  line-height: $hight;
+}
+@mixin rounded-md {
+  border-radius: 0.375rem;
+}
+@mixin rounded-lg {
+  border-radius: 0.5rem;
+}
+@mixin rounded-full {
+  border-radius: 9999px;
+}
+
+@mixin svg($stroke-color, $fill-color) {
+  path {
+    fill: $fill-color;
+    stroke: $stroke-color;
+  }
+  circle {
+    fill: $fill-color;
+    stroke: $stroke-color;
+  }
+  ellipse {
+    fill: $fill-color;
+    stroke: $stroke-color;
+  }
+}
+
+@mixin box-shadow($top, $left, $blur, $color, $inset: false) {
+  @if $inset {
+    -webkit-box-shadow: inset $top $left $blur $color;
+    -moz-box-shadow: inset $top $left $blur $color;
+    box-shadow: inset $top $left $blur $color;
+  } @else {
+    -webkit-box-shadow: $top $left $blur $color;
+    -moz-box-shadow: $top $left $blur $color;
+    box-shadow: $top $left $blur $color;
+  }
+}

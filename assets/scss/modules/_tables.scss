@@ -1,0 +1,118 @@
+@mixin tables {
+  table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0rem 1.5rem;
+
+    td {
+      padding: 0.5rem;
+      background-color: $white-100;
+
+      .mbr-name {
+        font-weight: bold;
+      }
+
+      .mbr-email {
+        color: $black-50;
+      }
+    }
+    @include svgs(20px, auto);
+  }
+}
+
+@mixin shaded-table {
+  table {
+    width: 100%;
+    table-layout: auto;
+    border-collapse: collapse;
+
+    tr:nth-child(odd) {
+      background-color: $gray-1;
+    }
+
+    th,
+    td {
+      padding: 0.5rem;
+    }
+  }
+}
+
+@mixin table-responsive($size) {
+  border-collapse: separate;
+  border-spacing: 0rem 0.2rem !important;
+
+  thead {
+    text-align: left;
+  }
+  th {
+    white-space: nowrap;
+  }
+
+  th,
+  td {
+    font-size: 0.875rem;
+    padding: 0.75rem;
+  }
+
+  tr {
+    border: solid 1px $gray-2;
+  }
+
+  td {
+    width: auto;
+    color: $black-100;
+
+    a:hover {
+      color: $yellow-100;
+    }
+
+    &:first-child {
+      width: 30%;
+      text-align: left;
+      font-weight: bold;
+      color: $black-100;
+      @media screen and (max-width: $size) {
+        width: auto;
+        border-left: none;
+      }
+    }
+
+    .header {
+      display: none;
+    }
+  }
+
+  tbody {
+    tr {
+      background-color: $white-100;
+      // border-spacing: 0rem 0.2rem;
+      &:hover {
+        @include shadow-lg;
+      }
+      @media screen and (min-width: $size) {
+        height: 70px;
+      }
+    }
+  }
+
+  @media screen and (max-width: $size) {
+    thead {
+      display: none;
+      text-align: center;
+    }
+    tr {
+      display: flex;
+      flex-direction: column;
+      margin: 1rem 0rem;
+      padding: 1rem;
+    }
+    td {
+      .header {
+        display: inline-block;
+        font-weight: bold;
+        color: $black-100;
+        padding-right: 5px;
+      }
+    }
+  }
+}
