@@ -100,7 +100,9 @@ Here is an example list of high-level tasks necessary to complete this project t
 3. Implement opening and closing the menu using javascript
     1. Javascript files are located in `assets/js`
     2. A (very) brief example javascript file and dependency are provided. You may overwrite them as needed
-4. Submit your project branch on [GitHub](https://github.com/) using `git push origin <your branch name>`.
+4. Submit your project
+   1. TODO: Replace this image with appropriate text and remove the image from the repo 
+   ![](submission-instructions.png)
 
 ---
 
