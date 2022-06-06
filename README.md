@@ -7,10 +7,6 @@ are used to support the mock development environment.
 
 ![](demo.gif)
 
-## Table of contents
-
----
-
 ## About LEARN
 
 ---
