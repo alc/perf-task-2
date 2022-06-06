@@ -1,13 +1,19 @@
 # Performance Task #2
 
-For this task, you are asked to implement an example off-canvas menu. You can find some background information about
-this kind of menu here: https://www.webfx.com/blog/web-design/off-canvas-menu. This tasks provides a mock LEARN
-environment in which the menu is to be built. The project includes some source files from the live LEARN website that
+TODO: Reference the actual job title and req. #
+
+## About LEARN
+
+[LEARN](https://learn.k20center.ou.edu) is a website developed by the [K20 Center](https://k20center.ou.edu). It is a repository of educational materials
+like lesson plans, classroom strategies, professional development activities and more created through K20 grants and
+partnerships.
+
+For this task, you are asked to implement an off-canvas menu for LEARN. You can find some background information about
+this kind of menu here: https://www.webfx.com/blog/web-design/off-canvas-menu. This task provides a mock LEARN
+environment in which the menu is to be built. It also includes some source files from the live LEARN website that
 are used to support the mock development environment.
 
 ![](demo.gif)
-
-## About LEARN
 
 ---
 
@@ -101,8 +107,8 @@ Here is an example list of high-level tasks necessary to complete this project t
     1. Javascript files are located in `assets/js`
     2. A (very) brief example javascript file and dependency are provided. You may overwrite them as needed
 4. Submit your project
-   1. TODO: Replace this image with appropriate text and remove the image from the repo 
-   ![](submission-instructions.png)
+    1. TODO: Replace this image with appropriate text and remove the image from the repo
+       ![](submission-instructions.png)
 
 ---
 
@@ -162,6 +168,7 @@ total point value will be multiplied by the multiplier to determine a score, and
         - (4 pts) Documentation of interesting or notable decisions
 
 ### Examples
+
 > (14 pts) Menu includes all required content
 
 All the requested content is present, so you receive 1.0 x 14 = 14 points
