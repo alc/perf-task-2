@@ -68,9 +68,8 @@ resolve them.
 ## Getting started
 
 1. Ensure software tools are installed and available from the command line.
-2. Open a command prompt/shell in the location you want to store the project
-3. Clone the repository using `git clone https://github.com/alc/perf-task-2`.
-4. Create a new branch with your first name (e.g. `git branch -b aaron`)
+2. Open a command prompt/shell in the location you want to store the project.
+3. Duplicate the repository using the [submission guidelines](#submission-to-github) below.
 5. Install dependencies using `npm install`.
 6. Launch the development server using `npm start`.
 
