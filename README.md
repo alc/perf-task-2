@@ -41,9 +41,7 @@ The follow specific items will be used to download the project and create a deve
 
 - [Git](https://git-scm.com/)
     - Usage of Git includes:
-        - Cloning the project repository.
-        - Creating a personal working branch.
-        - Pushing the branch back to the server upon completion.
+        - Submitting finished code to GitHub
 - [Node.js](https://nodejs.org/en/)
     - Usage of Node includes:
         - Installing javascript dependencies using `npm`.
