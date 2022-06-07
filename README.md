@@ -1,6 +1,6 @@
 # Performance Task #2
 
-TODO: Reference the actual job title and req. #
+This task is related to job posting #214049 for _Web Developer UX/UI Designer_.
 
 ## About LEARN
 
@@ -8,14 +8,11 @@ TODO: Reference the actual job title and req. #
 like lesson plans, classroom strategies, professional development activities and more created through K20 grants and
 partnerships.
 
-For this task, you are asked to implement an off-canvas menu for LEARN. You can find some background information about
-this kind of menu here: https://www.webfx.com/blog/web-design/off-canvas-menu. This task provides a mock LEARN
-environment in which the menu is to be built. It also includes some source files from the live LEARN website that
-are used to support the mock development environment.
+For this task, you are asked to implement an [off-canvas menu](https://www.webfx.com/blog/web-design/off-canvas-menu) 
+for LEARN. You are provided with a mock LEARN environment in which the menu is to be built. Included are some source
+files from the live LEARN website that are used to support the mock development environment.
 
-![](demo.gif)
-
----
+![A screenshot of the current menu in LEARN](demo.gif)
 
 ## Requirements for this menu:
 
@@ -38,8 +35,6 @@ are used to support the mock development environment.
 You may create an account on the [LEARN website](https://learn.k20center.ou.edu) and sign in to observe a similar menu
 on the home page.
 
----
-
 ## Software you will need:
 
 The follow specific items will be used to download the project and create a development environment:
@@ -56,8 +51,6 @@ The follow specific items will be used to download the project and create a deve
 
 Aside from Git and Node, you may use any code editor and other tools you feel necessary to complete the task.
 
----
-
 ## Programming languages you will use:
 
 - [Twig](https://twig.symfony.com/) templates and HTML
@@ -72,8 +65,6 @@ The task project is setup with limited support for including 3rd-party libraries
 hand whenever possible. If there are issues integrating 3rd-party libraries into the task project, it is up to you to
 resolve them.
 
----
-
 ## Getting started
 
 1. Ensure software tools are installed and available from the command line.
@@ -86,8 +77,6 @@ resolve them.
 At this point, you should be able to navigate to http://localhost:3000 to see the task home page. It should appear
 similar to the LEARN home page, but most links and buttons will not be functional. At this point you are ready to begin
 development.
-
----
 
 ## Major tasks
 
@@ -107,10 +96,25 @@ Here is an example list of high-level tasks necessary to complete this project t
     1. Javascript files are located in `assets/js`
     2. A (very) brief example javascript file and dependency are provided. You may overwrite them as needed
 4. Submit your project
-    1. TODO: Replace this image with appropriate text and remove the image from the repo
-       ![](submission-instructions.png)
+   1. We ask that you submit your project to us via [GitHub](https://github.com) using the steps below.
 
----
+### Submission to GitHub
+If you do not already have a GitHub account, you will need to create one.
+
+**Note: Do not fork this repository!** We ask you to duplicate the repository instead of forking it to prevent
+your work from being visible to the public.
+
+1. Sign into GitHub
+2. Create a new repository (go to the "Repositories" tab and click "New")
+3. Click the link to **Import a repository**
+4. For the old repo's clone URL, use [](https://github.com/alc/perf-task-2)
+5. Make the repository as **Private**
+6. Give the repository a name (it doesn't matter what name you use)
+7. Click "Begin Import". It may take a minute or two to complete.
+8. Navigate to your new repository by clicking the User icon in the top right and choosing "Your Repositories"
+9. Open the repository "Settings" tab and select "Collaborators" on the left menu
+10. Add "alc" as a collaborator so that we can review your work
+11. Email us when your project is complete and pushed to GitHub
 
 ## Implementation notes
 
@@ -126,8 +130,6 @@ Here is an example list of high-level tasks necessary to complete this project t
 - We encourage thinking about code re-use. If you write code that seems like it could reasonably be useful elsewhere,
   consider abstracting it for that potential use.
 - You may develop for modern browsers only. There is no need to address browser compatability issues.
-
----
 
 ## Project scoring
 
