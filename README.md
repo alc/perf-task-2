@@ -18,10 +18,10 @@ files from the live LEARN website that are used to support the mock development 
 
 ### Size and position
 
-- On larger device widths (min-width 1280px), the menu should appear on-canvas, as part of the page
-- Below that threshold, the menu should be controlled with a button that opens and closes the menu
-- On smaller devices, the menu may - but does not have to - occupy the entire page width
-- Menu should open from the left side of the page
+- On larger screen widths (min-width 1280px), the menu should appear on-canvas (i.e. visible in the page) at all times
+- Below that threshold, the menu should be off-canvas by default and controlled with a button that opens and closes it
+- The menu should be usable on phone-sized screens
+- The menu should open from the left side of the page
 
 ### Content
 
@@ -133,54 +133,41 @@ your work from being visible to the public.
 
 ## Project scoring
 
-Each item listed below with "(## pts)" will be rated using the following scale to determine a multiplier. Each item's
-total point value will be multiplied by the multiplier to determine a score, and the scores summed for a final rating.
-
-### Multipliers
-
-- Did not attempt - 0x multiplier
-- Attempted but fails to meet expectations - 0.5x multiplier
-- Meets expectations - 1x multiplier
-- Exceeds expectations - 1.1x multiplier
+Your project will be scored in two categories of criteria: major project requirements and code quality. The maximum possible
+score is 140 points, 40% from major project requirements and 60% code quality.
 
 ### Graded items
 
-- General requirements met (50 points total)
-    - (14 pts) Menu includes all required content
-    - (14 pts) Menu changes sizes/position/visibility correctly and the control button icon indicates whether the menu
-      is open or closed
-    - (14 pts) Menu style matches the surrounding LEARN environment
-    - (8 pts) Project submission follows guidelines
-- Code quality (50 points total)
-    - Twig and HTML (10 points total)
-        - (6 pts) Idiomatic usage of Twig control structures (i.e. `if/else`, `for` loops, etc.)
-        - (2 pts) Valid HTML syntax is produced
-        - (2 pts) No presentational markup
-    - SASS/CSS (15 points total)
-        - (9 pts) Clear and concise implementation
-        - (3 pts) Appropriate use of variables, mixins, etc. to abstract code
-        - (3 pts) Inline CSS code in HTML (if used) is explained with a comment
-    - Javascript (15 points total)
-        - (9 pts) Clear and concise implementation
-        - (3 pts) Usage of modern techniques
-        - (3 pts) No pollution of the global namespace
-    - General (20 points total)
-        - (10 pts) Appropriate code organization
-        - (6 pts) Consistent code style
-        - (4 pts) Documentation of interesting or notable decisions
+Major project requirements  (56 points possible)
+- Menu includes all required content (14 points possible)
+  - 0 points - Not present
+  - 7 points - Most content is present
+  - 14 points - All content is present
+- Menu is sized correctly on all specified screen widths (21 points possible)
+  - 0/7 points - At screen widths 1280px and up: menu is always visible
+  - 0/7 points - On screens below 1280px wide: menu is hidden by default
+  - 0/7 points - Menu is usable on phone-sized screens
+- Menu opens and closes at smaller widths as specified (7 points possible)
+  - 0/7 points - Menu opens and closes with a correct indicator icon
+- Menu style is consistent with the provided LEARN environment (14 points possible)
+  - 0 points - Menu does not match surrounding environment
+  - 7 points - Menu matches surrounding environment with minor discrepancies
+  - 14 points - Menu seamlessly matches surrounding environment
 
-### Examples
+Code quality will be grading using "rubric version 2016" from https://www.stgm.nl/quality. We will **only** grade your 
+project on the following criteria:
+- names
+- comments
+- layouts
+- formatting
+- idiom
+- expressions
+- decomposition
 
-> (14 pts) Menu includes all required content
+Each criterion will award 1-4 points based on the rated "level" in the rubric, for a total of up to 28 points.
+The rubric will be scored separately for each of the following kinds of code:
+- HTML and Twig
+- SASS/CSS
+- Javascript
 
-All the requested content is present, so you receive 1.0 x 14 = 14 points
-
-> (3 pts) Inline CSS code in HTML (if used) is explained with a comment
-
-An inline style is present with no explanation, so you receive 0.5 x 3 = 1.5 points
-
-> (4 pts) Documentation of interesting or notable decisions
-
-We find some confusing code and there is no documentation, so you receive 0 x 4 = 0 points
-
-From these 3 examples, you received a total score of 15.5 points out of a possible 21. 
+The total possible contribution of points from code quality is 84 - 28 points from each kind of code.
